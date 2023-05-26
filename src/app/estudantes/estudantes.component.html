@@ -1,1 +1,38 @@
-<p>estudantes works!</p>
+<div class="row">
+    <div class="col-8 m-auto">
+      <form [formGroup]="formGroupEstudante">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="E-mail">
+        </div>
+        <div class="mb-3 d-flex justify-content-end">
+          <button class="btn btn-success" (click)="save()">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">E-mail</th>
+        <th class="d-flex justify-content-end" scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudante of estudantes" >
+        <th scope="row">{{estudante.ra}}</th>
+        <td>{{estudante.name}}</td>
+        <td>{{estudante.email}}</td>
+        <td class="d-flex justify-content-end">
+          <button class="btn btn-danger me-1" (click)="remove(estudante)">Excluir</button>
+          <button class="btn btn-primary" (click)="edit(estudante)">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

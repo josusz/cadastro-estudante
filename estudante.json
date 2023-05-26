@@ -1,0 +1,11 @@
+{
+  "estudantes": [
+    {
+      "ra": 2023100,
+      "name": "José Bertolino de Andrade",
+      "email": "jose.andrade@fatec.sp.gov.br",
+      "course": "Systems Analysis and Development",
+      "semester": "3"
+    }
+  ]
+}
