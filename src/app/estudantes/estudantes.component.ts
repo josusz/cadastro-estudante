@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Estudante } from '../estudante';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { EstudanteService } from '../estudante.service';
+import { EstudanteService } from './../estudante.service';
 
 @Component({
   selector: 'app-estudantes',
