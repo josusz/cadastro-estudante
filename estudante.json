@@ -1,11 +1,18 @@
 {
   "estudantes": [
     {
-      "ra": 2023100,
-      "name": "José Bertolino de Andrade",
+      "id": 2023100,
+      "name": "José Bertolino de Andrades",
       "email": "jose.andrade@fatec.sp.gov.br",
       "course": "Systems Analysis and Development",
       "semester": "3"
+    },
+    {
+      "id": 2023101,
+      "name": "Laura Rodrigues Oliveira",
+      "email": "laura.oliveira@fatec.sp.gov.br",
+      "course": "Systems Analysis and Development",
+      "semester": 4
     }
   ]
 }

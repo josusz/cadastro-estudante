@@ -13,9 +13,9 @@ export class EstudantesComponent implements OnInit{
   formGroupEstudante: FormGroup;
   isEditing: boolean = false;
 
-  constructor(private EstudanteService: EstudanteService, private formBuilder: FormBuilder){
+  constructor(private EstudanteService: EstudanteService, formBuilder: FormBuilder){
     this.formGroupEstudante = formBuilder.group({
-      ra: [''],
+      id: [''],
       name: [''],
       email: [''],
       course: [''],

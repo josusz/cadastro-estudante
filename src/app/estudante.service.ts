@@ -20,10 +20,10 @@ import { Estudante } from './estudante';
     }
   
     remove(estudante: Estudante): Observable<void>{
-      return this.http.delete<void>(`${this.url}/${estudante.ra}`);
+      return this.http.delete<void>(`${this.url}/${estudante.id}`);
     }
   
     update(estudante: Estudante): Observable<Estudante>{
-      return this.http.put<Estudante>(`${this.url}/${estudante.ra}`, estudante);
+      return this.http.put<Estudante>(`${this.url}/${estudante.id}`, estudante);
     }
   }

@@ -3,7 +3,7 @@
       <form [formGroup]="formGroupEstudante">
         <div class="mb-3">
           <label for="ra" class="form-label">RA</label>
-          <input type="number" formControlName="ra" class="form-control" id="ra" placeholder="RA">
+          <input type="number" formControlName="id" class="form-control" id="id" placeholder="RA">
         </div>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
@@ -38,7 +38,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let estudante of estudantes" >
-        <th scope="row">{{estudante.ra}}</th>
+        <th scope="row">{{estudante.id}}</th>
         <td>{{estudante.name}}</td>
         <td>{{estudante.email}}</td>
         <td class="d-flex justify-content-end">
