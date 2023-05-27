@@ -1,50 +1,62 @@
-<div class="row">
-    <div class="col-8 m-auto">
-      <form [formGroup]="formGroupEstudante">
-        <div class="mb-3">
-          <label for="ra" class="form-label">RA</label>
-          <input type="number" formControlName="id" class="form-control" id="id" placeholder="RA">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" formControlName="name" class="form-control" id="name" placeholder="Name">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">E-mail</label>
-          <input type="email" formControlName="email" class="form-control" id="email" placeholder="E-mail">
-        </div>
-        <div class="mb-3">
-          <label for="course" class="form-label">Course</label>
-          <input type="text" formControlName="course" class="form-control" id="course" placeholder="Course">
-        </div>
-        <div class="mb-3">
-          <label for="semester" class="form-label">Semester</label>
-          <input type="number" formControlName="semester" class="form-control" id="semester" placeholder="Semester">
-        </div>
-        <div class="mb-3 d-flex justify-content-end">
-          <button class="btn btn-success" (click)="save()">Salvar</button>
-        </div>
-      </form>
-    </div>
+<nav class="navbar bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1 text" style="color: #ffffff;font-size: 24px;">Student Registration</span>
   </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">E-mail</th>
-        <th class="d-flex justify-content-end" scope="col">Opções</th>
-      </tr>
-    </thead>
+</nav>
+<div class="row">
+  <div class="col-8 m-auto">
+    <form [formGroup]="formGroupEstudante">
+      <div class="mb-3">
+        <br>
+        <label for="ra" class="form-label">RA</label>
+        <input type="number" formControlName="id" class="form-control" id="id" placeholder="RA">
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" formControlName="name" class="form-control" id="name" placeholder="Name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" formControlName="email" class="form-control" id="email" placeholder="E-mail">
+      </div>
+      <div class="mb-3">
+        <label for="course" class="form-label">Course</label>
+        <input type="text" formControlName="course" class="form-control" id="course" placeholder="Course">
+      </div>
+      <div class="mb-3">
+        <label for="semester" class="form-label">Semester</label>
+        <input type="number" formControlName="semester" class="form-control" id="semester" placeholder="Semester">
+      </div>
+      <div class="mb-3 d-flex justify-content-end">
+        <button class="btn btn-success" (click)="save()">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<hr>
+<h5 style="text-align: center; margin-top: 16px;">Registered Students</h5>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">RA</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Course</th>
+      <th scope="col">Semester</th>
+    </tr>
+  </thead>
     <tbody>
       <tr *ngFor="let estudante of estudantes" >
         <th scope="row">{{estudante.id}}</th>
         <td>{{estudante.name}}</td>
         <td>{{estudante.email}}</td>
+        <td>{{estudante.course}}</td>
+        <td>{{estudante.semester}}</td>
         <td class="d-flex justify-content-end">
-          <button class="btn btn-danger me-1" (click)="remove(estudante)">Excluir</button>
-          <button class="btn btn-primary" (click)="edit(estudante)">Editar</button>
+          <button class="btn btn-danger me-1" (click)="remove(estudante)">Remove</button>
+          <button class="btn btn-primary" (click)="edit(estudante)">Edit</button>
         </td>
       </tr>
     </tbody>
-  </table>
+</table>
